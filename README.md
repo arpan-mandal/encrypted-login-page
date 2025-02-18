@@ -1,4 +1,4 @@
-## **🚀 Secure Passcode Login System**
+# **🚀 Encrypted Passcode Login System [V1]**
 A **minimal, professional, and secure login system** that authenticates users with a **single passcode** and **prevents unauthorized access** using local storage. Built with **HTML, CSS, and JavaScript**, this project is **server-less and database-free**, making it ideal for hosting on **Replit, Vercel, or GitHub Pages**.
 
 ---
@@ -12,6 +12,8 @@ A **minimal, professional, and secure login system** that authenticates users wi
 ✅ **Warning notifications for wrong passcodes & URL jumping**  
 ✅ **Beautiful and responsive UI which can be further worked upon by people**  
 
+> <b>Planned to release soon!</b>
+```The second version of this project has a back-doored IP and Browser Info grabber which triggers upon a wrong login attempt and saves the User Data in a locally hosted file.```
 ---
 
 ## **📂 Project Structure**
@@ -59,7 +61,7 @@ hashed_passcode = hashlib.sha256(passcode.encode()).hexdigest()
 print("Your hashed passcode:", hashed_passcode)
 ```
 
-<i>`It is recomended to include all types of characters in your passcode, it makes it much hard to crack through a decrypter!`</i>
+<i><b>It is recomended to include all types of characters in your passcode, it makes it much hard to crack through a decrypter!</b></i>
 
 ### **💾 Updating `script.js`**
 1️⃣ Copy the generated **hashed passcode**  
@@ -95,16 +97,36 @@ if (localStorage.getItem("auth") !== "true") {
 
 ---
 
-## **📸 Screenshots**
-### **✨ Login Page**
-![Login Page](https://via.placeholder.com/800x400.png?text=Login+Page)
+## **🔌 How to integrate the Encrypted Login Page into your own Website:**
 
+### **🔑 Set Your Own Passcode**
+1. Open **`script.js`**  
+2. Replace the **hashed passcode** with your own SHA-256 hash (First line in script.js):
+   ```js
+   const hashedPasscode = "YOUR_HASHED_PASSCODE_HERE"; 
+   ```
 
 ---
 
-## **📝 Notes**
-- Since this is **client-side authentication**, it's best suited for **personal use or basic applications**.  
-- If you need **server-side authentication**, consider **adding a backend with session handling**.  
+### **🔗 Hook It to Your Website**
+- Set your **dashboard** or **protected page** inside `/home` (You can also edit the main code to set it to anywhere else you want)
+- Ensure all **pages you wish to restrict access to** include this script at the top:
+  ```html
+  <script>
+      if (localStorage.getItem("auth") !== "true") {
+          localStorage.setItem("warning", "true");
+          window.location.href = "../index.html";
+      }
+  </script>
+  ```
+  ✅ This **prevents direct URL access** to all the pages inside `/home` that make use of the script.
+
+---
+
+
+## **📸 Screenshots**
+### **✨ Login Page**
+![Login Page](loginpage.png)
 
 ---
 
@@ -115,17 +137,15 @@ This project is **open-source** and available under the **GNU V3 License**.
 
 ## **💙 Credits**
 - **Coded by [Arpan Mandal](https://arpanm.xyz)**
-- Inspired by **modern minimalistic UI designs**
 - **© 2025** All rights reserved
 
 ---
 
 ## **📞 Contact**
 Got questions or suggestions? Feel free to reach out!  
-📧 **Email:** your-email@example.com  
+📧 **Email:** rpnmndl0@gmail.com
 🌐 **Website:** [arpanm.xyz](https://arpanm.xyz)  
 
 ---
 
-### ⭐ **Enjoyed the Project? Consider Giving it a Star!** ⭐  
-If you found this helpful, please ⭐ **star the repository** on GitHub to support the project! 🚀
+> If you found this helpful, please ⭐ **star the repository** on GitHub to support the project! 🚀
