@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Enter Passcode</h2>
+        <input type="password" id="passcode" placeholder="Passcode">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="warning-box" class="notification hidden">
+        <span class="exclamation">❗</span> Please log in instead of URL jumping!
+    </div>
+
+    <div id="wrong-passcode-box" class="notification hidden">
+        <span class="exclamation">❗</span> Incorrect passcode. Try again.
+    </div>
+
+    <div class="footer">
+        Coded by <a href="https://arpanm.xyz" target="_blank">Arpan Mandal</a> | © 2025
+    </div>
+    <!-- Try not to remove my credits, feels sad being an open-source developer. -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
