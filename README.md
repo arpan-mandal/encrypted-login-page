@@ -1,6 +1,8 @@
 # **🚀 Encrypted Passcode Login System [V1]**
 A **minimal, professional, and secure login system** that authenticates users with a **single passcode** and **prevents unauthorized access** using local storage. Built with **HTML, CSS, and JavaScript**, this project is **server-less and database-free**, making it ideal for hosting on **Replit, Vercel, or GitHub Pages**.
 
+![Login Page](loginpage.png)
+
 ---
 
 ## **📌 Features**
@@ -124,11 +126,6 @@ if (localStorage.getItem("auth") !== "true") {
 ---
 
 
-## **📸 Screenshots**
-### **✨ Login Page**
-![Login Page](loginpage.png)
-
----
 
 ## **📜 License**
 This project is **open-source** and available under the **GNU V3 License**.
