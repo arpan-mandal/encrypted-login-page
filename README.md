@@ -14,8 +14,8 @@ A **minimal, professional, and secure login system** that authenticates users wi
 ✅ **Warning notifications for wrong passcodes & URL jumping**  
 ✅ **Beautiful and responsive UI which can be further worked upon by people**  
 
-> <b>Planned to release soon!</b>
-```The second version of this project has a back-doored IP and Browser Info grabber which triggers upon a wrong login attempt and saves the User Data in a locally hosted file.```
+> <b>[Second Version of this Project:](https://github.com/arpan-mandal/defensive-login-system)</b>
+```The second version of this project has a back-doored IP and Browser Info grabber which logs the intruder's personal information.```
 ---
 
 ## **📂 Project Structure**
